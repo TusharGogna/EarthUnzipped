@@ -17,6 +17,7 @@ import com.mdoc.earthunzipped.presentation.CountriesScreen
 import com.mdoc.earthunzipped.presentation.CountriesViewModel
 import com.mdoc.earthunzipped.ui.theme.EarthUnzippedTheme
 import com.mdoc.earthunzipped.ui.theme.Purple80
+import com.mdoc.earthunzipped.ui.theme.PurpleGrey80
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,8 +28,7 @@ class MainActivity : ComponentActivity() {
             EarthUnzippedTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = Purple80
+                    modifier = Modifier.fillMaxSize()
                 ) {
                     val viewModel = hiltViewModel<CountriesViewModel>()
                     val state by viewModel.state.collectAsState()
